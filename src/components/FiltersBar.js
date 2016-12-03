@@ -13,7 +13,6 @@ export default class FiltersBar extends React.Component {
     ]
   }
 
-
   onClick (filter) {
     const {store} = this.props
     store.subscribe(() => {

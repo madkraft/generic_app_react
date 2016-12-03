@@ -1,13 +1,10 @@
-import React, { Component } from 'react'
+import React from 'react'
 import Nav from './Navigation'
 
-export default class Main extends Component {
-  render () {
-    return (
-      <div>
-        <Nav />
-        {React.cloneElement(this.props.children, this.props)}
-      </div>
-    )
-  }
-}
+const Main = props =>
+  <div>
+    <Nav />
+    {React.cloneElement(props.children, ...props)}
+  </div>
+
+export default Main
